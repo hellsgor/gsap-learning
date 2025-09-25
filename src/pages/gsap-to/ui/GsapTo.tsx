@@ -1,6 +1,19 @@
 import { Container, Cube } from '@/shared/ui';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export function GsapTo() {
+  useGSAP(() => {
+    gsap.to('#blue-cube', {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      duration: 2,
+      rotation: 280,
+      ease: 'sine',
+    });
+  }, []);
+
   return (
     <>
       <section>
