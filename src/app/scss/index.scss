@@ -38,6 +38,12 @@ body {
   width: 100vw;
 }
 
+section {
+  &:not(:last-of-type) {
+    margin-bottom: 64px;
+  }
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
