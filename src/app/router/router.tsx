@@ -4,6 +4,7 @@ import { MainPage } from '@/pages/main';
 import { GsapTo } from '@/pages/gsap-to';
 import { GsapFrom } from '@/pages/gsap-from';
 import { GsapFromTo } from '@/pages/gsap-from-to';
+import { Timeline } from '@/pages/timeline';
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: 'gsap-from-to',
         Component: GsapFromTo,
+      },
+      {
+        path: 'gsap-timeline',
+        Component: Timeline,
       },
     ],
   },
