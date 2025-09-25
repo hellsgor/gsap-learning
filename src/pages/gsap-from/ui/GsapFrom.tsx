@@ -1,6 +1,18 @@
-import { Container } from '@/shared/ui';
+import { Container, Cube } from '@/shared/ui';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export function GsapFrom() {
+  useGSAP(() => {
+    gsap.from('#cube-green', {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      duration: 2,
+      rotation: 360,
+      ease: 'power1.inOut',
+    });
+  }, []);
   return (
     <>
       <section>
@@ -29,6 +41,12 @@ export function GsapFrom() {
             </code>
             .
           </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Cube variant="green" id="cube-green" />
         </Container>
       </section>
     </>
