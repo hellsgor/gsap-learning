@@ -6,6 +6,10 @@
   position: relative;
   padding-left: 2rem;
 
+  a {
+    width: fit-content;
+  }
+
   &::before {
     content: counter(chapter-counter) '.';
     counter-increment: chapter-counter;
