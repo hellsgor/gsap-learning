@@ -1,4 +1,4 @@
-import { Container } from '@/shared/ui';
+import { Container, Cube } from '@/shared/ui';
 
 export function GsapFromTo() {
   return (
@@ -31,6 +31,12 @@ export function GsapFromTo() {
             </code>
             .
           </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Cube variant="orange" />
         </Container>
       </section>
     </>
