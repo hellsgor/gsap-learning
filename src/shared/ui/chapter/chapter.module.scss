@@ -1,0 +1,19 @@
+.chapter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  max-width: 400px;
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: counter(chapter-counter) '.';
+    counter-increment: chapter-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: var(--color-content-hint);
+    font-size: 1.17em;
+  }
+}
