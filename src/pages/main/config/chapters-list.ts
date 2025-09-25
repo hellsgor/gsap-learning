@@ -7,4 +7,11 @@ export const CHAPTERS_LIST = [
     description:
       'Для анимации элементов из их текущего состояния в новое состояние.',
   },
+
+  {
+    href: ROUTES.gsapFrom,
+    text: 'GSAP From',
+    description:
+      'Используется для анимации элементов из нового состояния к их текущему состоянию.',
+  },
 ] as const;
