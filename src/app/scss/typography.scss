@@ -13,9 +13,17 @@ h1 {
 .content {
   max-width: 600px;
 
-  p {
-    &:not(:last-child) {
-      margin-bottom: 20px;
+  p,
+  ul,
+  ol {
+    margin: 20px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
