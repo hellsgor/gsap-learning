@@ -1,11 +1,29 @@
 :root {
   font-family: system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.content {
+  max-width: 600px;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  code {
+    color: var(--color-content-code);
+  }
+
+  h1 {
+    margin-bottom: 32px;
+  }
 }
