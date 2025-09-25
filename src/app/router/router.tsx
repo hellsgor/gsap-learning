@@ -3,6 +3,7 @@ import { Layout } from '../layout';
 import { MainPage } from '@/pages/main';
 import { GsapTo } from '@/pages/gsap-to';
 import { GsapFrom } from '@/pages/gsap-from';
+import { GsapFromTo } from '@/pages/gsap-from-to';
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: 'gsap-from',
         Component: GsapFrom,
+      },
+      {
+        path: 'gsap-from-to',
+        Component: GsapFromTo,
       },
     ],
   },
