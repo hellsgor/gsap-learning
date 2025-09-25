@@ -2,9 +2,11 @@ import clsx from 'clsx';
 import st from './cube.module.scss';
 import type { HTMLAttributes } from 'react';
 
+type CubeVariants = 'blue' | 'green';
+
 type CubeProps = HTMLAttributes<HTMLDivElement> & {
   content?: string;
-  variant?: 'blue';
+  variant?: CubeVariants;
   className?: string;
 };
 
