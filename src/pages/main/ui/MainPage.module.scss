@@ -1,0 +1,9 @@
+.chaptersList {
+  counter-reset: chapter-counter;
+  list-style: none;
+  padding: 32px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
