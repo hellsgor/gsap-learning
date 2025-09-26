@@ -5,6 +5,7 @@ import { GsapTo } from '@/pages/gsap-to';
 import { GsapFrom } from '@/pages/gsap-from';
 import { GsapFromTo } from '@/pages/gsap-from-to';
 import { Timeline } from '@/pages/timeline';
+import { GsapStagger } from '@/pages/gsap-stagger';
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
         path: 'gsap-timeline',
         Component: Timeline,
       },
+      { path: 'gsap-stagger', Component: GsapStagger },
     ],
   },
 ]);
