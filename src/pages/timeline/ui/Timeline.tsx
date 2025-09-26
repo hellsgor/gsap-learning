@@ -1,4 +1,4 @@
-import { Container } from '@/shared/ui';
+import { Container, Cube } from '@/shared/ui';
 
 export function Timeline() {
   return (
@@ -34,6 +34,12 @@ export function Timeline() {
               .
             </p>
           </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Cube variant="yellow" />
         </Container>
       </section>
     </>
