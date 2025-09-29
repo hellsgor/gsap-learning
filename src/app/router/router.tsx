@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
 import { Layout } from '../layout';
 import { MainPage } from '@/pages/main';
 import { GsapTo } from '@/pages/gsap-to';
@@ -9,7 +9,7 @@ import { GsapStagger } from '@/pages/gsap-stagger';
 import { GsapScrollTrigger } from '@/pages/gsap-scroll-trigger';
 import { GsapText } from '@/pages/gsap-text';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     Component: Layout,
