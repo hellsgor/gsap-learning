@@ -41,4 +41,9 @@ export const CHAPTERS_LIST = [
     description:
       'Плагин ScrollTrigger используется для запуска анимаций в зависимости от позиции прокрутки.',
   },
+  {
+    href: ROUTES.text,
+    text: 'GSAP Text',
+    description: 'Научитесь анимировать текст с помощью GSAP.',
+  },
 ] as const;
