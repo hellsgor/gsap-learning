@@ -10,6 +10,7 @@ export function MainPage() {
         <ol className={st.chaptersList}>
           {CHAPTERS_LIST.map((chapter) => (
             <Chapter
+              key={chapter.text}
               href={chapter.href}
               text={chapter.text}
               description={chapter.description}

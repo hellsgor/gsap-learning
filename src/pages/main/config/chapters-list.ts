@@ -35,4 +35,10 @@ export const CHAPTERS_LIST = [
     description:
       'Используется для анимации нескольких элементов с эффектом «ступенчатой» задержки.',
   },
+  {
+    href: ROUTES.scrollTrigger,
+    text: 'GSAP ScrollTrigger',
+    description:
+      'Плагин ScrollTrigger используется для запуска анимаций в зависимости от позиции прокрутки.',
+  },
 ] as const;

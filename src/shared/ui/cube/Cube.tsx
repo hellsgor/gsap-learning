@@ -13,7 +13,8 @@ type CubeVariants =
   | 'blue-medium'
   | 'blue-dark'
   | 'indigo'
-  | 'indigo-dark';
+  | 'indigo-dark'
+  | 'pink';
 
 type CubeProps = HTMLAttributes<HTMLDivElement> & {
   content?: string;
