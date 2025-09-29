@@ -1,12 +1,29 @@
 import { Container } from '@/shared/ui';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export function GsapText() {
+  useGSAP(() => {
+    gsap.fromTo(
+      '#heading',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        ease: 'power1.inOut',
+        opacity: 1,
+        y: 0,
+      },
+    );
+  }, []);
+
   return (
     <>
       <section>
         <Container>
           <div className="content">
-            <h1>GSAP text animation</h1>
+            <h1 id="heading">GSAP text animation</h1>
             <p>
               Мы можем использовать те же методы, такие как{' '}
               <code>gsap.to()</code>, <code>gsap.from()</code>,{' '}
