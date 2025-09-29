@@ -1,0 +1,1 @@
+export { TitleUpdater } from './TitleUpdater';
