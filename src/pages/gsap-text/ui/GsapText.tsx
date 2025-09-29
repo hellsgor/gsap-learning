@@ -1,0 +1,74 @@
+import { Container } from '@/shared/ui';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
+export function GsapText() {
+  useGSAP(() => {
+    gsap.fromTo(
+      '#heading',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        ease: 'power1.inOut',
+        opacity: 1,
+        y: 0,
+      },
+    );
+
+    gsap.fromTo(
+      '.paragraph',
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        ease: 'power1.inOut',
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        stagger: 0.1,
+      },
+    );
+  }, []);
+
+  return (
+    <>
+      <section>
+        <Container>
+          <div className="content">
+            <h1 id="heading">GSAP text animation</h1>
+            <p className="paragraph">
+              Мы можем использовать те же методы, такие как{' '}
+              <code>gsap.to()</code>, <code>gsap.from()</code>,{' '}
+              <code>gsap.fromTo()</code> и <code>gsap.timeline()</code>, чтобы
+              анимировать текст.
+            </p>
+            <p className="paragraph">
+              С помощью этих методов можно реализовать различные текстовые
+              анимации и эффекты, такие как появление (fade in), исчезновение
+              (fade out), выезд (slide in), выезд наружу (slide out) и многое
+              другое.
+            </p>
+            <p className="paragraph">
+              Для более продвинутых текстовых анимаций и эффектов можно
+              использовать GSAP TextPlugin или сторонние библиотеки,
+              специализирующиеся на анимации текста.
+            </p>
+            <p className="paragraph">
+              Узнайте больше о плагине{' '}
+              <a
+                href="https://gsap.com/docs/v3/Plugins/TextPlugin"
+                target="_blank"
+              >
+                TextPlugin
+              </a>
+              .
+            </p>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}

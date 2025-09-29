@@ -6,4 +6,5 @@ export const ROUTES = {
   timeline: 'gsap-timeline',
   stagger: 'gsap-stagger',
   scrollTrigger: 'gsap-scroll-trigger',
+  text: 'gsap-text',
 };

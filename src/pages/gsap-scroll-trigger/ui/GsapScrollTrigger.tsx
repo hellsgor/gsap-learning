@@ -27,7 +27,7 @@ export function GsapScrollTrigger() {
             start: 'bottom bottom',
             end: 'top 10%',
             scrub: true,
-            markers: true,
+            // markers: true,
           },
           ease: 'power1.inOut',
         });
