@@ -1,4 +1,6 @@
 import { Container, Cube } from '@/shared/ui';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export function GsapStagger() {
   const cubeVariants = [
@@ -10,6 +12,24 @@ export function GsapStagger() {
     'indigo',
     'indigo-dark',
   ] as const;
+
+  useGSAP(() => {
+    gsap.to('.stagger-cube', {
+      y: 250,
+      rotation: 360,
+      opacity: 0,
+      repeat: -1,
+      yoyo: true,
+      // stagger: 0.1,
+      stagger: {
+        amount: 1.5,
+        grid: [2, 1],
+        axis: 'y',
+        ease: 'circ.inOut',
+        from: 'center',
+      },
+    });
+  }, []);
 
   return (
     <>
@@ -46,7 +66,12 @@ export function GsapStagger() {
       <section>
         <Container style={{ display: 'flex', columnGap: '16px' }}>
           {cubeVariants.map((cubeVariant) => (
-            <Cube key={cubeVariant} short variant={cubeVariant} />
+            <Cube
+              key={cubeVariant}
+              short
+              variant={cubeVariant}
+              className="stagger-cube"
+            />
           ))}
         </Container>
       </section>
