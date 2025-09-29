@@ -1,6 +1,40 @@
-import { Container } from '@/shared/ui';
+import { Container, Cube } from '@/shared/ui';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function GsapScrollTrigger() {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      if (!scrollRef.current?.children) return;
+      const cubes = gsap.utils.toArray(
+        scrollRef.current.children,
+      ) as HTMLElement[];
+
+      cubes.forEach((cube) => {
+        gsap.to(cube, {
+          x: 150 * (cubes.indexOf(cube) + 3),
+          rotation: 360,
+          borderRadius: '100%',
+          scale: 1.5,
+          scrollTrigger: {
+            trigger: cube,
+            start: 'bottom bottom',
+            end: 'top 10%',
+            scrub: true,
+            markers: true,
+          },
+          ease: 'power1.inOut',
+        });
+      });
+    },
+    { scope: scrollRef },
+  );
   return (
     <>
       <section>
@@ -28,6 +62,16 @@ export function GsapScrollTrigger() {
               .
             </p>
           </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <div className="scroll-container" ref={scrollRef}>
+            <Cube variant="pink" className="scroll-cube" />
+            <Cube variant="orange" className="scroll-cube" />
+          </div>
+          <div style={{ height: '300px' }}></div>
         </Container>
       </section>
     </>
