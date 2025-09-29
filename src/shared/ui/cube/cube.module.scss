@@ -1,6 +1,7 @@
 .cube {
-  width: 100px;
-  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 100px;
+  height: 100px;
   display: flex;
   place-items: center;
   border-radius: 16px;
@@ -9,6 +10,11 @@
     font-weight: 600;
     font-size: 20px;
     color: #fff;
+  }
+
+  &_short {
+    max-width: 32px;
+    border-radius: 8px;
   }
 
   &_blue {
@@ -25,5 +31,33 @@
 
   &_yellow {
     background-color: var(--color-background-yellow);
+  }
+
+  &_lavender-light {
+    background-color: var(--color-background-lavender-light);
+  }
+
+  &_lavender {
+    background-color: var(--color-background-lavender);
+  }
+
+  &_blue-light {
+    background-color: var(--color-background-blue-light);
+  }
+
+  &_blue-medium {
+    background-color: var(--color-background-blue-medium);
+  }
+
+  &_blue-dark {
+    background-color: var(--color-background-blue-dark);
+  }
+
+  &_indigo {
+    background-color: var(--color-background-indigo);
+  }
+
+  &_indigo-dark {
+    background-color: var(--color-background-indigo-dark);
   }
 }

@@ -4,4 +4,5 @@ export const ROUTES = {
   gsapFrom: 'gsap-from',
   gsapFromTo: 'gsap-from-to',
   timeline: 'gsap-timeline',
+  stagger: 'gsap-stagger',
 };

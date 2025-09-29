@@ -24,8 +24,15 @@ export const CHAPTERS_LIST = [
 
   {
     href: ROUTES.timeline,
-    text: 'Timeline',
+    text: 'GSAP Timeline',
     description:
       'Используется для создания таймлайна, чтобы управлять несколькими анимациями.',
+  },
+
+  {
+    href: ROUTES.stagger,
+    text: 'GSAP Stagger',
+    description:
+      'Используется для анимации нескольких элементов с эффектом «ступенчатой» задержки.',
   },
 ] as const;
