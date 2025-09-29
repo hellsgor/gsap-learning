@@ -18,18 +18,25 @@ type CubeVariants =
 type CubeProps = HTMLAttributes<HTMLDivElement> & {
   content?: string;
   variant?: CubeVariants;
+  short?: boolean;
   className?: string;
 };
 
 export function Cube({
   content,
   variant = 'blue',
+  short,
   className,
   ...props
 }: CubeProps) {
   return (
     <div
-      className={clsx(st.cube, st[`cube_${variant}`] || null, className)}
+      className={clsx(
+        st.cube,
+        st[`cube_${variant}`] || null,
+        short && st.cube_short,
+        className,
+      )}
       {...props}
     >
       {content && <span>{content}</span>}
