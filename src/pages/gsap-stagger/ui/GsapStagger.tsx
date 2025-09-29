@@ -1,6 +1,16 @@
-import { Container } from '@/shared/ui';
+import { Container, Cube } from '@/shared/ui';
 
 export function GsapStagger() {
+  const cubeVariants = [
+    'lavender-light',
+    'lavender',
+    'blue-light',
+    'blue-medium',
+    'blue-dark',
+    'indigo',
+    'indigo-dark',
+  ] as const;
+
   return (
     <>
       <section>
@@ -30,6 +40,14 @@ export function GsapStagger() {
               .
             </p>
           </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container style={{ display: 'flex', columnGap: '16px' }}>
+          {cubeVariants.map((cubeVariant) => (
+            <Cube key={cubeVariant} short variant={cubeVariant} />
+          ))}
         </Container>
       </section>
     </>
