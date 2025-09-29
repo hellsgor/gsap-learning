@@ -2,7 +2,18 @@ import clsx from 'clsx';
 import st from './cube.module.scss';
 import type { HTMLAttributes } from 'react';
 
-type CubeVariants = 'blue' | 'green' | 'orange' | 'yellow';
+type CubeVariants =
+  | 'blue'
+  | 'green'
+  | 'orange'
+  | 'yellow'
+  | 'lavender-light'
+  | 'lavender'
+  | 'blue-light'
+  | 'blue-medium'
+  | 'blue-dark'
+  | 'indigo'
+  | 'indigo-dark';
 
 type CubeProps = HTMLAttributes<HTMLDivElement> & {
   content?: string;
